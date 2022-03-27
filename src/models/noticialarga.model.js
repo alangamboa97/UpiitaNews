@@ -2,18 +2,21 @@ const {Schema, model} = require('mongoose');
 
 
         
-const noticiaCorta = new Schema({
+const noticiaLarga = new Schema({
          titulo: {
              type: String,
              required: true
          },
      
-         descripcion: {
+         cuerpo: {
              type: String,
              required: true
          },
-     
-        
+         autor: {
+             type: String,
+             required: true
+         },       
+
          fecha: {
              type: String,
              required: true,
@@ -25,5 +28,4 @@ const noticiaCorta = new Schema({
          }
 });
 
-module.exports = model('noticiaCorta', noticiaCorta);
-
+module.exports = model('noticiaLarga', noticiaLarga);
